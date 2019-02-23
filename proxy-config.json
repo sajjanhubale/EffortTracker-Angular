@@ -1,0 +1,7 @@
+{
+  "/**":{
+        "target":"http://localhost:8080/spboot/",
+        "secure":false,
+        "logLevel":"debug"
+    }
+}

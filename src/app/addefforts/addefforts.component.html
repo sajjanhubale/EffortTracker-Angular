@@ -1,0 +1,81 @@
+
+<div class="card card-primary" >
+    <app-navbar></app-navbar>
+  <div class="card-block" align="Center">
+        <div class="container">
+        <div class="col-lg-12 well">
+
+        <div class="row">
+              <form>
+                <div class="col-sm-12">
+                  <div class="row">
+                      <div class="col-sm-6 form-group">
+                          <label>Client Name</label>
+                          <select  placeholder="Select Client Name Here.." class="form-control"  name="client_name"  [(ngModel)]="myClients.client_name">
+                              <option *ngFor="let entry of myClients">{{entry.client_name}}</option>
+                              </select>
+                      </div>
+                     
+                      <div class="col-sm-6 form-group">
+                        
+                      <div class="ui-g ui-fluid">
+                          <div class="ui-g-12">
+                              <label>Date</label>
+                              <p-calendar placeholder="Enter Date Here.." [(ngModel)]="effort.Date" name="Date" [monthNavigator]="true"  [yearNavigator]="true" yearRange="2000:2030"></p-calendar>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                 
+                  					
+                  <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Enter Description Here.." rows="3" class="form-control"  name="description" [(ngModel)]="effort.description"></textarea>
+                  </div>	
+                  <div class="row">
+                  <div class="col-sm-6 form-group">
+                      <label>Activity Name</label>
+                      <select  placeholder="Select Activity  Here.." class="form-control"  name="activity"  [(ngModel)]="effort.activity">
+                        <option *ngFor="let entry of activities">{{entry}}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Category</label>
+                        <select  placeholder="Select Category  Here.." class="form-control"  name="category"  [(ngModel)]="effort.category">
+                          <option *ngFor="let entry of categories" >{{entry}}</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 form-group">
+                      <label>Ticket Reference</label>
+                      <input type="text" placeholder="Enter ticket refrence Here.." class="form-control"  name="ticket_reference" [(ngModel)]="effort.ticket_reference">
+                    </div>	
+                    <div class="col-sm-6 form-group">
+                     
+                      <div class="ui-g ui-fluid">
+                          <div class="ui-g-12">
+                              <label>Efforts in mins</label>
+                       <p-calendar placeholder="Enter efforts in minuts Here.."  name="efforts_time" [timeOnly]="true" [(ngModel)]="effort.efforts_min" ></p-calendar>
+                       </div>
+                      </div>
+                    </div>	
+                    	
+                  </div>
+                  <div class="form-group">
+                    <label>Meeting Details</label>
+                    <input type="text" placeholder="Enter Meeting Details Here.." class="form-control"  name="customer_meeting_details" [(ngModel)]="effort.customer_meeting_details">
+                  </div>					
+                  <div class="form-group" align="Center">
+                          <button type="button" class="btn btn-lg btn-info" (click)="addEfforts()">Submit</button>		
+                          <button type="button" class="btn btn-lg btn-info">Reset</button>	
+                          <button type="button" class="btn btn-lg btn-info">Cancel</button>		
+                          </div>
+                      
+                </div>
+              </form> 
+              </div>
+        </div>
+        </div>
+    </div>
+</div>
